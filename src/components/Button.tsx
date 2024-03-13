@@ -5,12 +5,12 @@ const shapes = {
 } as const;
 const variants = {
   fill: {
-    black_900: "bg-black-900 text-white-A700",
+    black_900: "bg-black-900 text-white hover:bg-gray-800",
     red_300: "bg-red-300 shadow-sm",
     cyan_400: "bg-cyan-400 shadow-md",
     lime_800: "bg-lime-800 shadow-lg",
     red_400_01: "bg-red-400_01",
-    green_600: "bg-green-600 shadow-3xl text-white-A700",
+    green_600: "bg-green-600 shadow-3xl text-white",
   },
   outline: {
     black_900: "border-black-900 border-[3px] border-solid text-black-900",

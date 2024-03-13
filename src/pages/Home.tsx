@@ -1,5 +1,11 @@
+import { Jumbotron } from "../components";
+
 function Home() {
-  return <div>home</div>;
+  return (
+    <div>
+      <Jumbotron />
+    </div>
+  );
 }
 
 export default Home;
