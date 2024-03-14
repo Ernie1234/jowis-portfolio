@@ -4,3 +4,8 @@ export { default as Img } from "./Img";
 export { default as Heading } from "./Heading";
 export { default as Button } from "./Button";
 export { default as Jumbotron } from "./Jumbotron";
+export { default as MeetTeam } from "./MeetTeam";
+export { default as TeamCard } from "./TeamCard";
+export { default as WhatWeDo } from "./WhatWeDo";
+export { default as WhatCard } from "./WhatCard";
+export { default as Testimony } from "./Testimony";

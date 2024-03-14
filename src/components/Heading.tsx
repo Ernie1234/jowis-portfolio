@@ -4,7 +4,7 @@ const sizes = {
   "4xl": "text-[40px] font-bold leading-[51px]",
   "5xl": "text-[50px] font-bold",
   "6xl": "lg:text-7xl md:text-4xl text-2xl font-bold leading-[80px]",
-  xs: "text-[15px] font-bold",
+  xs: "text-base",
   s: "text-[17px] font-semibold",
   md: "text-lg font-bold leading-[23px]",
   lg: "text-xl font-semi-bold",
@@ -19,7 +19,11 @@ interface Props {
 
 function Heading({ children, className = "", size = "md" }: Props) {
   return (
-    <h3 className={`text-gray-900 ${className} ${sizes[size]}`}>{children}</h3>
+    <h3
+      className={`text-gray-900 dark:text-gray-50 ${className} ${sizes[size]}`}
+    >
+      {children}
+    </h3>
   );
 }
 

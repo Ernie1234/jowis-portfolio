@@ -29,7 +29,9 @@ function NavBar() {
                       <GoDotFill size={12} className="text-red-400" />
                     </span>
                   ) : (
-                    <span className="text-white hover:opacity-85">Home</span>
+                    <span className="text-gray-800 dark:text-gray-50 hover:opacity-85">
+                      Home
+                    </span>
                   );
                 }}
               </NavLink>
@@ -46,7 +48,9 @@ function NavBar() {
                       <GoDotFill size={12} className="text-red-400" />
                     </span>
                   ) : (
-                    <span className="text-white hover:opacity-85">About</span>
+                    <span className="text-gray-800 dark:text-gray-50 hover:opacity-85">
+                      About
+                    </span>
                   );
                 }}
               </NavLink>
@@ -63,7 +67,9 @@ function NavBar() {
                       <GoDotFill size={12} className="text-red-400" />
                     </span>
                   ) : (
-                    <span className="text-white hover:opacity-85">About</span>
+                    <span className="text-gray-800 dark:text-gray-50 hover:opacity-85">
+                      Work
+                    </span>
                   );
                 }}
               </NavLink>
@@ -80,7 +86,9 @@ function NavBar() {
                       <GoDotFill size={12} className="text-red-400" />
                     </span>
                   ) : (
-                    <span className="text-white hover:opacity-85">About</span>
+                    <span className="text-gray-800 dark:text-gray-50 hover:opacity-85">
+                      Contact
+                    </span>
                   );
                 }}
               </NavLink>
