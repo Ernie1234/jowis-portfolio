@@ -34,7 +34,7 @@ function Jumbotron() {
         <Img
           alt=""
           className="absolute bottom-0 right-0 w-3/12 hidden md:block"
-          src="../../public/assets/img_web_1.png"
+          src="/assets/img_web_1.png"
         />
       </div>
     </div>
