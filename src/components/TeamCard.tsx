@@ -15,10 +15,12 @@ function TeamCard({ item }: Props) {
           src={item.img}
         />
       </div>
-      <Heading size="lg" className="font-semibold">
+      <Heading size="lg" className="dark:text-gray-50 font-semibold">
         {item.name}
       </Heading>
-      <Heading size="lg">{item.job}</Heading>
+      <Heading size="lg" className="dark:text-gray-300">
+        {item.job}
+      </Heading>
     </div>
   );
 }

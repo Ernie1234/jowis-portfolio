@@ -8,4 +8,5 @@ export { default as MeetTeam } from "./MeetTeam";
 export { default as TeamCard } from "./TeamCard";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as WhatCard } from "./WhatCard";
-export { default as Testimony } from "./Testimony";
+export { default as Testimonial } from "./Testimonial";
+export { default as TestimonialCard } from "./TestimonialCard";

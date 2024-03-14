@@ -4,7 +4,10 @@ import { Service } from "../data";
 function WhatWeDo() {
   return (
     <div className="max-w-screen-lg mx-auto my-8 md:my-16 lg:my-20">
-      <Heading size="4xl" className="font-semibold text-center pb-3">
+      <Heading
+        size="4xl"
+        className="dark:text-gray-50 font-semibold text-center pb-3"
+      >
         What we do
       </Heading>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8 p-8 md:p-16 lg:p-20 bg-pink-300 rounded-md md:rounded-lg lg:rounded-xl">
@@ -12,7 +15,7 @@ function WhatWeDo() {
           const Icon = serve.icon;
           return (
             <div
-              className="hover:bg-white dark:hover:bg-gray-700 backdrop-blur-md p-2 md:p-5 rounded-md"
+              className="hover:bg-pink-900/10 backdrop-blur-md p-2 md:p-5 rounded-md"
               key={serve.id}
             >
               <div

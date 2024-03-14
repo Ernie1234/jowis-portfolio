@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 const sizes = {
   "2xl": "text-3xl font-bold leading-[38px]",
   "3xl": "text-[35px] font-bold",
@@ -12,18 +14,14 @@ const sizes = {
 };
 
 interface Props {
-  children: JSX.Element | string;
+  children: JSX.Element | string | ReactNode;
   size?: keyof typeof sizes;
   className?: string;
 }
 
 function Heading({ children, className = "", size = "md" }: Props) {
   return (
-    <h3
-      className={`text-gray-900 dark:text-gray-50 ${className} ${sizes[size]}`}
-    >
-      {children}
-    </h3>
+    <h3 className={`text-gray-900 ${className} ${sizes[size]}`}>{children}</h3>
   );
 }
 

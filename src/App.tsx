@@ -4,7 +4,7 @@ import { Footer, NavBar } from "./components";
 
 function App() {
   return (
-    <>
+    <div className="bg-white dark:bg-gray-900">
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -16,7 +16,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import { Jumbotron, MeetTeam, Testimony, WhatWeDo } from "../components";
+import { Jumbotron, MeetTeam, Testimonial, WhatWeDo } from "../components";
 
 function Home() {
   return (
@@ -6,7 +6,7 @@ function Home() {
       <Jumbotron />
       <MeetTeam isShownAll={false} />
       <WhatWeDo />
-      <Testimony />
+      <Testimonial />
     </div>
   );
 }

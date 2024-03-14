@@ -9,7 +9,9 @@ function MeetTeam({ isShownAll }: Props) {
   return (
     <div className="max-w-screen-lg mx-auto">
       <div className="flex justify-between items-center">
-        <Heading size="4xl">Meet the team</Heading>
+        <Heading size="4xl" className="dark:text-gray-50">
+          Meet the team
+        </Heading>
         {!isShownAll && (
           <Link to="/about">
             <Heading
