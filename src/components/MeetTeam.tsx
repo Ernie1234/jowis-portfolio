@@ -7,7 +7,7 @@ interface Props {
 }
 function MeetTeam({ isShownAll }: Props) {
   return (
-    <div className="max-w-screen-lg mx-auto">
+    <div className="max-w-screen-lg mx-auto px-8 md:px-0">
       <div className="flex justify-between items-center">
         <Heading size="4xl" className="dark:text-gray-50">
           Meet the team

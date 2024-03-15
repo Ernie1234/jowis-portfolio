@@ -14,16 +14,13 @@ function TestimonialCard({
   clientInfo,
 }: TestimonialCardPropsType) {
   return (
-    <div className="bg-gray-100/50 rounded-2xl p-6">
-      <div>
-        <Heading
-          size="2xl"
-          className="dark:text-black lg:mb-20 mb-4 text-2xl font-bold"
-        >
+    <div className="bg-gray-100/50 rounded-2xl p-6 pb-0 flex flex-col justify-between">
+      <div className="text-center md:text-left">
+        <Heading size="2xl" className="dark:text-black text-2xl font-bold">
           &quot;{title}&quot;
         </Heading>
       </div>
-      <Heading className="px-4 py-0 flex flex-wrap-reverse gap-x-6 justify-between items-center">
+      <div className="pt-8 md:pt-3 md:px-4 flex gap-1 md:gap-6 justify-between items-center">
         <div>
           <Heading size="s" className="dark:text-black !font-bold">
             {client}
@@ -35,8 +32,12 @@ function TestimonialCard({
             {clientInfo}
           </Heading>
         </div>
-        <img src={img} className="max-w-[8rem]" alt={client} />
-      </Heading>
+        <img
+          src={img}
+          className="max-w-16 md:max-w-24 lg:max-w-32 max-h-min"
+          alt={client}
+        />
+      </div>
     </div>
   );
 }

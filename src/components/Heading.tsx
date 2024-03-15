@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 const sizes = {
   "2xl": "text-3xl font-bold leading-[38px]",
   "3xl": "text-[35px] font-bold",
-  "4xl": "text-[40px] font-bold leading-[51px]",
+  "4xl": "text-2xl md:text-[40px] font-bold leading-[51px]",
   "5xl": "text-[50px] font-bold",
   "6xl": "lg:text-7xl md:text-4xl text-2xl font-bold leading-[80px]",
   xs: "text-base",
