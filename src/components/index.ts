@@ -10,3 +10,4 @@ export { default as WhatWeDo } from "./WhatWeDo";
 export { default as WhatCard } from "./WhatCard";
 export { default as Testimonial } from "./Testimonial";
 export { default as TestimonialCard } from "./TestimonialCard";
+export { default as MasonryLayout } from "./MasonryLayout";
