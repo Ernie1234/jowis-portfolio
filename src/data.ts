@@ -56,3 +56,27 @@ export const Gallery = [
   "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2glMjBtb21lbnRzfGVufDB8fDB8fHww",
   "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHRlY2glMjBtb21lbnRzfGVufDB8fDB8fHww",
 ];
+
+export const projectData = [
+  {
+    img: "assets/img_group_21.png",
+    title: "Project 1",
+    description: "This is the first project that we have done.",
+    skills: ["UI/UX Designer", "Frontend Developer"],
+    color: "bg-amber-400",
+    url: "https://www.google.com",
+  },
+  {
+    img: "assets/img_group_790.png",
+    title: "Project 2",
+    description: "This is the first project that we have done.",
+    skills: [
+      "Frontend Developer",
+      "Web Developer",
+      "UI/UX Designer",
+      "Graphic Designer",
+    ],
+    color: "bg-blue-400",
+    url: "https://www.google.com",
+  },
+];

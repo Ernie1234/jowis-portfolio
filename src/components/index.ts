@@ -11,3 +11,5 @@ export { default as WhatCard } from "./WhatCard";
 export { default as Testimonial } from "./Testimonial";
 export { default as TestimonialCard } from "./TestimonialCard";
 export { default as MasonryLayout } from "./MasonryLayout";
+export { default as Banner } from "./Banner";
+export { default as ProjectCard } from "./ProjectCard";
