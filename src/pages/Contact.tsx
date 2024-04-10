@@ -62,13 +62,13 @@ function Contact() {
             onClick={() => {}}
             size="sm"
             rightIcon={<IoIosSend />}
-            className="bg-red-400 mb-4 gap-3 rounded-3xl w-full"
+            className="bg-red-400 shadow-xl mb-4 gap-3 rounded-3xl w-full"
           >
             Send
           </Button>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full md:w-[34%] mb-3 gap-5 p-12 md:p-5 bg-white-A700 shadow-2xl rounded-[20px]">
+        <div className="flex flex-col items-center justify-center w-full md:w-[34%] mb-3 gap-5 p-12 md:p-5 bg-white shadow-2xl rounded-[20px]">
           <div className="flex flex-col items-start justify-start w-[97%] md:w-full mt-6 gap-[33px]">
             <input
               name="contact"

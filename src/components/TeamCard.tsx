@@ -1,8 +1,9 @@
 import { Heading, Img } from ".";
-import { TItem } from "../Type";
+import { TTeam } from "../Type";
+import { urlFor } from "../utils/client";
 
 interface Props {
-  item: TItem;
+  item: TTeam;
 }
 
 function TeamCard({ item }: Props) {
@@ -10,16 +11,16 @@ function TeamCard({ item }: Props) {
     <div className="w-full">
       <div className="overflow-hidden rounded-md">
         <Img
-          alt={item.name}
+          alt={item.username}
           className="w-full object-cover overflow-hidden hover:scale-110 transition-all duration-500"
-          src={item.img}
+          src={urlFor(item.profileImage).width(250).quality(100).url()}
         />
       </div>
       <Heading size="lg" className="dark:text-gray-50 font-semibold">
-        {item.name}
+        {item.username}
       </Heading>
       <Heading size="lg" className="dark:text-gray-300">
-        {item.job}
+        {item.position}
       </Heading>
     </div>
   );

@@ -1,6 +1,6 @@
-export type TItem = {
-  name: string;
-  id: number;
-  job: string;
-  img: string;
+export type TTeam = {
+  username: string;
+  _id: number;
+  position: string;
+  profileImage: string;
 };

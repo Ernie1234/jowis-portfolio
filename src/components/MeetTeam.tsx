@@ -1,11 +1,26 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { Heading, TeamCard } from ".";
-import { Team } from "../data";
+import { client } from "../utils/client";
+import { teamQuery } from "../utils/query";
+import { TTeam } from "../Type";
 
 interface Props {
   isShownAll: boolean;
 }
 function MeetTeam({ isShownAll }: Props) {
+  const [team, setTeam] = useState<TTeam[]>([]);
+
+  useEffect(() => {
+    client
+      .fetch(teamQuery)
+      .then((response) => setTeam(response))
+      .catch((error) => console.log(error));
+  }, []);
+
+  console.log(team);
+
   return (
     <div className="max-w-screen-lg mx-auto px-8 md:px-0">
       <div className="flex justify-between items-center">
@@ -25,10 +40,10 @@ function MeetTeam({ isShownAll }: Props) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-12 mt-3">
         {!isShownAll
-          ? Team.slice(0, 3).map((item) => (
-              <TeamCard key={item.id} item={item} />
-            ))
-          : Team.map((item) => <TeamCard key={item.id} item={item} />)}
+          ? team
+              .slice(0, 3)
+              .map((item) => <TeamCard key={item._id} item={item} />)
+          : team.map((item) => <TeamCard key={item._id} item={item} />)}
       </div>
     </div>
   );
