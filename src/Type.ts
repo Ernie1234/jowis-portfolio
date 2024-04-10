@@ -17,3 +17,21 @@ export interface IProject {
   skills: string[];
   color: string;
 }
+export interface ITestimonials {
+  title: string;
+  client: string;
+  clientInfo: string;
+  img: {
+    asset: {
+      url: string;
+    };
+  };
+}
+export interface IGallery {
+  title: string;
+  picture: {
+    asset: {
+      url: string;
+    };
+  };
+}

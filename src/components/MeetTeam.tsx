@@ -40,8 +40,8 @@ function MeetTeam({ isShownAll }: Props) {
         {!isShownAll
           ? team
               .slice(0, 3)
-              .map((item) => <TeamCard key={item._id} item={item} />)
-          : team.map((item) => <TeamCard key={item._id} item={item} />)}
+              .map((item) => <TeamCard key={item.username} item={item} />)
+          : team.map((item) => <TeamCard key={item.username} item={item} />)}
       </div>
     </div>
   );

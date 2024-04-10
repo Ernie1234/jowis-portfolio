@@ -20,7 +20,7 @@ function TestimonialCard({
           &quot;{title}&quot;
         </Heading>
       </div>
-      <div className="pt-8 md:pt-3 md:px-4 flex gap-1 md:gap-6 justify-between items-center">
+      <div className="py-8 md:py-5 md:px-4 flex gap-1 md:gap-6 justify-between items-center">
         <div>
           <Heading size="s" className="dark:text-black !font-bold">
             {client}

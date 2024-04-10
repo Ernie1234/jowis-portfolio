@@ -1,23 +1,27 @@
-import { Heading, TestimonialCard } from ".";
+import { useEffect, useState } from "react";
 
-const testimonials = [
-  {
-    title:
-      "The team went above and beyond to ensure my issue was resolved quickly and efficiently. Truly outstanding!",
-    client: "Jessica Devis",
-    clientInfo: "Full Stack Developer @Netflix",
-    img: "https://cdn-icons-png.freepik.com/512/5968/5968579.png",
-  },
-  {
-    title:
-      "It have broadened my horizons and helped me advance my career. The community is incredibly supportive.",
-    client: "Marcell Glock",
-    clientInfo: "Graphic Designer, @Coinbase",
-    img: "https://www.svgrepo.com/show/330202/coinbase.svg",
-  },
-];
+import { Heading, Loading, TestimonialCard } from ".";
+import { ITestimonials } from "../Type";
+import { client } from "../utils/client";
+import { testimonialQuery } from "../utils/query";
 
 export function Testimonial() {
+  const [testimonials, setTestimonial] = useState<ITestimonials[] | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    client
+      .fetch(testimonialQuery)
+      .then((response) => setTestimonial(response))
+      .catch((error) => console.log(error));
+
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return <Loading title="Loading the testimonials for you!" />;
+  }
   return (
     <section className="px-8 py-10 lg:py-28">
       <div className="container mx-auto">
@@ -28,10 +32,10 @@ export function Testimonial() {
           From life-enhancing gadgets to unparalleled customer support, and
           transformative learning opportunities.
         </Heading>
-        <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
-          {testimonials.map((props, key) => (
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+          {testimonials?.map((props, key) => (
             <TestimonialCard
-              img={props.img}
+              img={props.img.asset.url}
               title={props.title}
               clientInfo={props.clientInfo}
               client={props.client}

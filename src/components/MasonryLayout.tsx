@@ -1,8 +1,10 @@
 import Masonry from "react-masonry-css";
 import { Heading, Img } from ".";
+import { IGallery } from "../Type";
+import { urlFor } from "../utils/client";
 
 interface Props {
-  gallery: [];
+  gallery: IGallery[] | null;
 }
 
 export default function MasonryLayout({ gallery }: Props) {
@@ -18,17 +20,21 @@ export default function MasonryLayout({ gallery }: Props) {
         Our Moment
       </Heading>
       <Masonry breakpointCols={breakpointColumnsObj} className="flex gap-3">
-        {gallery.map((pic) => (
-          <div key={pic} className="overflow-hidden">
-            <div className="w-full h-full rounded-xl overflow-hidden mt-3">
-              <Img
-                src={pic}
-                alt="gallery image"
-                className="rounded-xl  shadow-md hover:scale-105 transit duration-500"
-              />
+        {gallery &&
+          gallery?.map((pic) => (
+            <div key={pic.title} className="overflow-hidden">
+              <div className="w-full h-full rounded-xl overflow-hidden mt-3">
+                <Img
+                  src={urlFor(pic.picture.asset.url)
+                    .width(250)
+                    .quality(100)
+                    .url()}
+                  alt="gallery image"
+                  className="rounded-xl  shadow-md hover:scale-105 transit duration-500"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </Masonry>
     </div>
   );
