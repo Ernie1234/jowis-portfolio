@@ -28,7 +28,7 @@ function Banner({ text, secondaryText, img1, img2, img3, bg }: Props) {
           <div className="flex flex-row justify-end w-full">
             <div className="flex flex-row md:flex-col justify-end items-start w-full md:gap-5">
               <div className="flex flex-col items-center justify-start w-[91%] md:w-full gap-5 z-[1]">
-                <h3 className="text-3xl md:text-4xl lg:text-6xl font-semibold">
+                <h3 className="text-3xl dark:text-black md:text-4xl lg:text-6xl font-semibold">
                   {text}
                 </h3>
                 <Heading className="text-center" size="lg">

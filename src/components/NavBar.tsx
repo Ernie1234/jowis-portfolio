@@ -1,7 +1,9 @@
 import { GoDotFill } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 import { ModeToggle } from "./ModeToggle";
+import SideBar from "./SideBar";
 
 function NavBar() {
   return (
@@ -96,8 +98,11 @@ function NavBar() {
             </li>
           </ul>
         </div>
-        <div className="flex space-x-3 md:space-x-0 text-black dark:text-white">
+        <div className="flex justify-center items-center space-x-3 md:space-x-0 text-black dark:text-white">
           <ModeToggle />
+          <div className="block md:hidden">
+            <SideBar />
+          </div>
         </div>
       </div>
     </nav>
