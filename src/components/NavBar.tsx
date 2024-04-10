@@ -1,10 +1,11 @@
 import { GoDotFill } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { ModeToggle } from "./ModeToggle";
 
 function NavBar() {
   return (
-    <nav className="w-full z-[100] start-0 sticky py-4 bg-white dark:bg-gray-900 backdrop-blur shadow-md md:shadow-lg lg:shadow-xl">
+    <nav className="w-full start-0 sticky top-0 z-50 py-4 bg-white dark:bg-gray-900 backdrop-blur shadow-md md:shadow-lg lg:shadow-xl">
       <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto px-4">
         <Link
           to="/"
@@ -96,7 +97,7 @@ function NavBar() {
           </ul>
         </div>
         <div className="flex space-x-3 md:space-x-0 text-black dark:text-white">
-          mode toggle
+          <ModeToggle />
         </div>
       </div>
     </nav>
