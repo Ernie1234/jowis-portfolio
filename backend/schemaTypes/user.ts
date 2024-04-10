@@ -20,7 +20,7 @@ export default defineType({
     defineField({
       name: 'profileImage',
       title: 'Profile Image',
-      description: 'Position at Jowis',
+      description: 'Team member Image',
       type: 'image',
       options: {
         hotspot: true,

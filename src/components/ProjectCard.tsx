@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Heading, Img } from ".";
 
 interface Props {
-  bg: string;
+  projectColor: string;
   img: string;
   title: string;
   projectDesc: string;
@@ -10,10 +10,18 @@ interface Props {
   skills: string[];
 }
 
-function ProjectCard({ bg, img, title, projectDesc, url, skills }: Props) {
+function ProjectCard({
+  projectColor,
+  img,
+  title,
+  projectDesc,
+  url,
+  skills,
+}: Props) {
   return (
     <div
-      className={`flex flex-col md:flex-row gap-5 md:gap-8 justify-center p-5 w-full rounded-3xl ${bg} overflow-hidden`}
+      className={`flex flex-col md:flex-row gap-5 md:gap-8 justify-center p-5 w-full rounded-3x overflow-hidden`}
+      style={{ background: `${projectColor}` }}
     >
       <div className="flex-1 overflow-hidden">
         <Img
@@ -34,7 +42,7 @@ function ProjectCard({ bg, img, title, projectDesc, url, skills }: Props) {
             {skills.map((sk) => (
               <Heading
                 size="lg"
-                className="text-gray-900 bg-slate-950/10 p-2 rounded-md min-w-fit hover:bg-slate-900/5 transition-all duration-500"
+                className="text-gray-900 bg-slate-950/10 px-2 py-1 rounded-md min-w-fit hover:bg-slate-900/5 transition-all duration-500"
                 key={sk}
               >
                 {sk}

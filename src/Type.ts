@@ -4,3 +4,16 @@ export type TTeam = {
   position: string;
   profileImage: string;
 };
+
+export interface IProject {
+  title: string;
+  description: string;
+  img: {
+    asset: {
+      url: string;
+    };
+  };
+  url: string;
+  skills: string[];
+  color: string;
+}
