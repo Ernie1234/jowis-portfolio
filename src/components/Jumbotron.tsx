@@ -2,7 +2,7 @@ import { Button, Heading, Img } from ".";
 
 function Jumbotron() {
   return (
-    <div className="max-w-screen-lg bg-emerald-200 mx-auto rounded-md md:rounded-lg lg:rounded-xl my-8 md:my-16 lg:my-20 flex flex-col md:flex-row px-8 md:px-16 overflow-hidden relative">
+    <div className="max-w-screen-lg bg-emerald-200 mx-auto rounded-md md:rounded-lg lg:rounded-xl my-8 md:my-16 lg:my-20 flex flex-col justify-center items-center md:flex-row px-8 md:px-16 overflow-hidden relative">
       <div className="w-7/12 flex flex-col justify-between gap-8 md:gap-12 py-8 md:py-16">
         <div>
           <Heading size="6xl">Maximize your business with Jowis</Heading>
@@ -29,7 +29,7 @@ function Jumbotron() {
           </Button>
         </div>
       </div>
-      <div className="w-5/12">
+      <div className="w-11/12 md:w-8/12 lg:w-5/12 pb-5 md:pb-0">
         <Img alt="" className="w-full" src="/assets/img_group_1.png" />
         <Img
           alt=""

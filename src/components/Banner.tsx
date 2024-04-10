@@ -12,10 +12,10 @@ interface Props {
 function Banner({ text, secondaryText, img1, img2, img3, bg }: Props) {
   return (
     <div
-      className={`flex flex-row justify-start w-full p-[53px] md:p-5 ${bg} rounded-[90px] my-8 md:my-16 lg:my-20`}
+      className={`flex flex-row justify-start w-full py-2 px-0 md:p-5 lg:p-8 ${bg} rounded-[90px] my-8 md:my-16 lg:my-20`}
     >
       <div className="flex flex-row md:flex-col justify-start items-start w-[88%] mt-[19px] ml-[60px] md:gap-5 md:ml-5">
-        <div className="flex flex-col items-start justify-start w-[10%] md:w-full gap-5">
+        <div className="hidden md:flex flex-col items-start justify-start w-[10%] md:w-full gap-5">
           <Img
             src={img1}
             alt="circleimage"
@@ -28,12 +28,9 @@ function Banner({ text, secondaryText, img1, img2, img3, bg }: Props) {
           <div className="flex flex-row justify-end w-full">
             <div className="flex flex-row md:flex-col justify-end items-start w-full md:gap-5">
               <div className="flex flex-col items-center justify-start w-[91%] md:w-full gap-5 z-[1]">
-                <Heading
-                  size="5xl"
-                  className="flex w-[66%] text-center leading-[60px]"
-                >
+                <h3 className="text-3xl md:text-4xl lg:text-6xl font-semibold">
                   {text}
-                </Heading>
+                </h3>
                 <Heading className="text-center" size="lg">
                   {secondaryText}
                 </Heading>
