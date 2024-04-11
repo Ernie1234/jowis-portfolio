@@ -13,7 +13,11 @@ function TeamCard({ item }: Props) {
         <Img
           alt={item.username}
           className="w-full object-cover overflow-hidden hover:scale-110 transition-all duration-500"
-          src={urlFor(item.profileImage).width(250).quality(100).url()}
+          src={urlFor(item.profileImage)
+            .width(250)
+            .height(100)
+            .quality(100)
+            .url()}
         />
       </div>
       <Heading size="lg" className="dark:text-gray-50 font-semibold">
